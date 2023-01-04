@@ -16,6 +16,7 @@ struct NanoChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.locale, .init(identifier: "ar"))
         }
     }
 }

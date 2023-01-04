@@ -12,8 +12,8 @@ struct ContentView: View {
     //MARK: vars
     let viewModel = ContentViewModel()
     @State private var allQuotes: [Quote] = []
-    
-    @State private var currentCategory = String()
+    @State private var arabicQuotes: [QuoteAr] = []
+    //@State private var currentCategory = String()
     
     //MARK: body
     var body: some View {
@@ -21,14 +21,23 @@ struct ContentView: View {
             //Quote
             GeometryReader { proxy in
                 TabView {
-                    ForEach(allQuotes, id: \.self) { quote in
-                        QuoteView(quote: quote)
+                    if viewModel.quoteService.isArabic {
+                        ForEach(arabicQuotes, id: \.self) { quote in
+                            QuoteView(quoteAr: quote)
+                        }.rotationEffect(.degrees(-90))
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
+                    } else {
+                        ForEach(allQuotes, id: \.self) { quote in
+                            QuoteView(quote: quote)
+                        }.rotationEffect(.degrees(-90))
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
                     }
-                    .rotationEffect(.degrees(-90))
-                    .frame(
-                        width: proxy.size.width,
-                        height: proxy.size.height
-                    )
                 }
                 .frame(
                     width: proxy.size.height,
@@ -40,7 +49,6 @@ struct ContentView: View {
                     PageTabViewStyle(indexDisplayMode: .never)
                 )
             }
-            
         }.onAppear{
             onAppear()
         }.background(
@@ -51,8 +59,12 @@ struct ContentView: View {
     
     //MARK: function
     private func onAppear() {
-        currentCategory = UserDefaults.standard.string(forKey: "currentCategory") ?? "inspirational"
-        allQuotes = viewModel.getQuotesOf(category: currentCategory)
+        //currentCategory = UserDefaults.standard.string(forKey: "currentCategory") ?? "inspirational"
+        if viewModel.quoteService.isArabic {
+            arabicQuotes = viewModel.getArabicQuotes()
+        } else {
+            allQuotes = viewModel.getQuotesOf(category: "inspirational")
+        }
     }
 }
 

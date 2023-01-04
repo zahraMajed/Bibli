@@ -10,13 +10,42 @@ import Foundation
 public struct QuoteService {
     //MARK: vars
     var quotesArr = [Quote]()
+    var quotesArArr = [QuoteAr]()
+    let isArabic = Locale.current.languageCode == "ar" ? true : false
     
     //MARK: init
     public init() {
-        readAndParseLocalQuotesJSONFile()
+        if isArabic {
+            readAndParseLocalQuotesArJSONFile()
+        } else {
+            readAndParseLocalQuotesJSONFile()
+        }
     }
     
     //MARK: readAndParse JSON functions
+    ///Read and parse local quotesAr JSON file to array of Arabic Quotes
+    mutating func readAndParseLocalQuotesArJSONFile() {
+        do {
+            //1- find the file path in the bundle
+            if let filePath = Bundle.main.path(forResource: "quotesAr", ofType: "json") {
+                //2- file path exits?,then convert the file path as URL.
+                let fileUrl = URL(fileURLWithPath: filePath)
+                //3- read the entire data at path & return it as a data object
+                let jsonData = try Data(contentsOf: fileUrl)
+                do {
+                    //4- convert data objects to a readable format
+                    quotesArArr = try JSONDecoder().decode([QuoteAr].self, from: jsonData)
+                } catch {
+                    print("error: \(error)")
+                }
+            }else {
+                print("filePath is not found")
+            }
+        } catch {
+            print("error: \(error)")
+        }
+    }
+    
     ///Read and parse local quotes JSON file to array of Quotes
     mutating func readAndParseLocalQuotesJSONFile() {
         do {
@@ -29,7 +58,6 @@ public struct QuoteService {
                 do {
                     //4- convert data objects to a readable format
                     quotesArr = try JSONDecoder().decode([Quote].self, from: jsonData)
-                    print(quotesArr)
                 } catch {
                     print("error: \(error)")
                 }
@@ -41,6 +69,7 @@ public struct QuoteService {
         }
     }
     
+    //MARK: English Quotes
     //MARK: getQuotesOf category function
     ///Return all quotes within givin category
     public func getQuotesOf(category: String) -> [Quote] {
@@ -70,5 +99,7 @@ public struct QuoteService {
         }
         return quote
     }
+    
+    
     
 }

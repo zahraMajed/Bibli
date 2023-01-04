@@ -9,14 +9,16 @@ import SwiftUI
 
 struct QuoteView: View {
     //MARK: vars
-    public var quote: Quote
+    let isArabic = Locale.current.languageCode == "ar" ? true : false
+    public var quote: Quote?
+    public var quoteAr: QuoteAr?
     
     var body: some View {
         VStack {
-            Text(quote.quote)
+            Text(isArabic ? quoteAr!.quote : quote!.quote)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .shadow(color: .black, radius: 2)
-            Text(quote.category)
+            Text(isArabic ? quoteAr!.author : quote!.category)
                 .font(.system(size: 18, weight: .light, design: .rounded))
                 .shadow(color: .black, radius: 2)
         }
