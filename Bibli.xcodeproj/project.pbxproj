@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BDC39DE2964278200D109A1 /* NanoChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DD2964278200D109A1 /* NanoChallengeApp.swift */; };
+		2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DD2964278200D109A1 /* BibliApp.swift */; };
 		2BDC39E02964278200D109A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DF2964278200D109A1 /* ContentView.swift */; };
 		2BDC39E22964278300D109A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39E12964278300D109A1 /* Assets.xcassets */; };
 		2BDC39E52964278300D109A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39E42964278300D109A1 /* Preview Assets.xcassets */; };
@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2BDC39DA2964278200D109A1 /* NanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BDC39DD2964278200D109A1 /* NanoChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallengeApp.swift; sourceTree = "<group>"; };
+		2BDC39DD2964278200D109A1 /* BibliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliApp.swift; sourceTree = "<group>"; };
 		2BDC39DF2964278200D109A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BDC39E12964278300D109A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BDC39E42964278300D109A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				2BDC39FD296580EE00D109A1 /* Localizable.strings */,
-				2BDC39DC2964278200D109A1 /* NanoChallenge */,
+				2BDC39DC2964278200D109A1 /* Bibli */,
 				2BDC39DB2964278200D109A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,7 +64,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BDC39DC2964278200D109A1 /* NanoChallenge */ = {
+		2BDC39DC2964278200D109A1 /* Bibli */ = {
 			isa = PBXGroup;
 			children = (
 				2BDC3A042965A40400D109A1 /* quotes.json */,
@@ -73,11 +73,11 @@
 				2BDC39ED296428E400D109A1 /* ViewModel */,
 				2BDC39EC296428A600D109A1 /* Models */,
 				2BDC39EB2964289500D109A1 /* Views */,
-				2BDC39DD2964278200D109A1 /* NanoChallengeApp.swift */,
+				2BDC39DD2964278200D109A1 /* BibliApp.swift */,
 				2BDC39E12964278300D109A1 /* Assets.xcassets */,
 				2BDC39E32964278300D109A1 /* Preview Content */,
 			);
-			path = NanoChallenge;
+			path = Bibli;
 			sourceTree = "<group>";
 		};
 		2BDC39E32964278300D109A1 /* Preview Content */ = {
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BDC39D52964278200D109A1 /* Build configuration list for PBXProject "NanoChallenge" */;
+			buildConfigurationList = 2BDC39D52964278200D109A1 /* Build configuration list for PBXProject "Bibli" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -200,7 +200,7 @@
 				2BDC39F3296435F500D109A1 /* QuotesService.swift in Sources */,
 				2BDC39F729644D0F00D109A1 /* QuoteView.swift in Sources */,
 				2BDC39E02964278200D109A1 /* ContentView.swift in Sources */,
-				2BDC39DE2964278200D109A1 /* NanoChallengeApp.swift in Sources */,
+				2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */,
 				2BDC39F029642B7500D109A1 /* Quotes.swift in Sources */,
 				2BDC39F5296448A500D109A1 /* ContentViewModel.swift in Sources */,
 			);
@@ -358,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bibli/Preview Content\"";
 				DEVELOPMENT_TEAM = 7MYQ7W5DQV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bibli/Preview Content\"";
 				DEVELOPMENT_TEAM = 7MYQ7W5DQV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -412,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BDC39D52964278200D109A1 /* Build configuration list for PBXProject "NanoChallenge" */ = {
+		2BDC39D52964278200D109A1 /* Build configuration list for PBXProject "Bibli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BDC39E62964278300D109A1 /* Debug */,

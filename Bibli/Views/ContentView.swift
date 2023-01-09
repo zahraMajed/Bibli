@@ -52,7 +52,7 @@ struct ContentView: View {
         }.onAppear{
             onAppear()
         }.background(
-            Color.brown
+            Color.white
         )
         .ignoresSafeArea()
     }
