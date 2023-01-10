@@ -15,7 +15,7 @@ struct OnBoardings: View {
         TabView{
             OnBoarding()
             //the next one should be the notification settings view and it should have the button that toggle the shouldShowOnboarding
-            OnBoarding()
+            NotificationSettings()
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(.page(backgroundDisplayMode: .always))

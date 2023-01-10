@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050D3B9B296D9F5D0042418C /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D3B9A296D9F5D0042418C /* NotificationSettings.swift */; };
 		2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DD2964278200D109A1 /* BibliApp.swift */; };
 		2BDC39E02964278200D109A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DF2964278200D109A1 /* ContentView.swift */; };
 		2BDC39E22964278300D109A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39E12964278300D109A1 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050D3B9A296D9F5D0042418C /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		2BDC39DA2964278200D109A1 /* NanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDC39DD2964278200D109A1 /* BibliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliApp.swift; sourceTree = "<group>"; };
 		2BDC39DF2964278200D109A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				2BDC3A28296D877500D109A1 /* On Boardings */,
 				2BDC39DF2964278200D109A1 /* ContentView.swift */,
 				2BDC39F629644D0F00D109A1 /* QuoteView.swift */,
+				050D3B9A296D9F5D0042418C /* NotificationSettings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				2BDC39F3296435F500D109A1 /* QuotesService.swift in Sources */,
 				2BDC39F729644D0F00D109A1 /* QuoteView.swift in Sources */,
+				050D3B9B296D9F5D0042418C /* NotificationSettings.swift in Sources */,
 				2BDC39E02964278200D109A1 /* ContentView.swift in Sources */,
 				2BDC3A2A296D878F00D109A1 /* OnBoarding.swift in Sources */,
 				2BDC3A35296D984400D109A1 /* OnBoardings.swift in Sources */,
