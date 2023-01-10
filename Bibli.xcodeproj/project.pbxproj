@@ -18,6 +18,7 @@
 		2BDC39FB296580EE00D109A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39FD296580EE00D109A1 /* Localizable.strings */; };
 		2BDC3A022965A40400D109A1 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A042965A40400D109A1 /* quotes.json */; };
 		2BDC3A052965A40F00D109A1 /* quotesAr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A072965A40F00D109A1 /* quotesAr.json */; };
+		2BDC3A2A296D878F00D109A1 /* onBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A29296D878F00D109A1 /* onBoarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2BDC39FE2965812100D109A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BDC3A032965A40400D109A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/quotes.json; sourceTree = "<group>"; };
 		2BDC3A062965A40F00D109A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ar; path = ar.lproj/quotesAr.json; sourceTree = "<group>"; };
+		2BDC3A29296D878F00D109A1 /* onBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		2BDC39EB2964289500D109A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2BDC3A28296D877500D109A1 /* On Boardings */,
 				2BDC39DF2964278200D109A1 /* ContentView.swift */,
 				2BDC39F629644D0F00D109A1 /* QuoteView.swift */,
 			);
@@ -119,6 +122,14 @@
 				2BDC39F2296435F500D109A1 /* QuotesService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2BDC3A28296D877500D109A1 /* On Boardings */ = {
+			isa = PBXGroup;
+			children = (
+				2BDC3A29296D878F00D109A1 /* onBoarding.swift */,
+			);
+			path = "On Boardings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				2BDC39F3296435F500D109A1 /* QuotesService.swift in Sources */,
 				2BDC39F729644D0F00D109A1 /* QuoteView.swift in Sources */,
 				2BDC39E02964278200D109A1 /* ContentView.swift in Sources */,
+				2BDC3A2A296D878F00D109A1 /* onBoarding.swift in Sources */,
 				2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */,
 				2BDC39F029642B7500D109A1 /* Quotes.swift in Sources */,
 				2BDC39F5296448A500D109A1 /* ContentViewModel.swift in Sources */,

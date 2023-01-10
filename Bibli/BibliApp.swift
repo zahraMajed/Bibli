@@ -15,8 +15,8 @@ struct BibliApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.locale, .init(identifier: "ar"))
+            onBoarding()
+                //.environment(\.locale, .init(identifier: "ar"))
         }
     }
 }
