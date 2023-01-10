@@ -18,9 +18,11 @@ struct QuoteView: View {
             Text(isArabic ? quoteAr!.quote : quote!.quote)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .shadow(color: .black, radius: 2)
+                .accessibilityLabel(isArabic ? quoteAr!.quote : quote!.quote)
             Text(isArabic ? quoteAr!.author : quote!.category)
                 .font(.system(size: 18, weight: .light, design: .rounded))
                 .shadow(color: .black, radius: 2)
+                .accessibilityLabel(isArabic ? quoteAr!.author : quote!.category)
         }
         .frame(maxWidth: .infinity, alignment: .center)
         .multilineTextAlignment(.center)
