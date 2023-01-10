@@ -9,9 +9,6 @@ import SwiftUI
 
 @main
 struct BibliApp: App {
-    //MARK: Vars for onboarding
-    //let onboardingDone = UserDefaults.standard.bool(forKey: "OnboardingDone")
-    //let data = OnboardingDataModel.data
     
     var body: some Scene {
         WindowGroup {
