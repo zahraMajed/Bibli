@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: vars
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     let viewModel = ContentViewModel()
     @State private var allQuotes: [Quote] = []
     @State private var arabicQuotes: [QuoteAr] = []
@@ -49,12 +50,13 @@ struct ContentView: View {
                     PageTabViewStyle(indexDisplayMode: .never)
                 )
             }
-        }.onAppear{
+        }
+        .onAppear{
             onAppear()
-        }.background(
-            Color.white
-        )
-        .ignoresSafeArea()
+        }
+        .fullScreenCover(isPresented: $shouldShowOnboarding) {
+            OnBoardings(shouldShowOnboarding: $shouldShowOnboarding)
+        }
     }
     
     //MARK: function

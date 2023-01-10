@@ -18,7 +18,12 @@
 		2BDC39FB296580EE00D109A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39FD296580EE00D109A1 /* Localizable.strings */; };
 		2BDC3A022965A40400D109A1 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A042965A40400D109A1 /* quotes.json */; };
 		2BDC3A052965A40F00D109A1 /* quotesAr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A072965A40F00D109A1 /* quotesAr.json */; };
-		2BDC3A2A296D878F00D109A1 /* onBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A29296D878F00D109A1 /* onBoarding.swift */; };
+		2BDC3A2A296D878F00D109A1 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A29296D878F00D109A1 /* OnBoarding.swift */; };
+		2BDC3A2C296D8C4500D109A1 /* AnimatedLogoI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A2B296D8C4500D109A1 /* AnimatedLogoI.swift */; };
+		2BDC3A2F296D8CBD00D109A1 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */; };
+		2BDC3A35296D984400D109A1 /* OnBoardings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A34296D984400D109A1 /* OnBoardings.swift */; };
+		2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A36296D9A9200D109A1 /* SplashView.swift */; };
+		2BDC3A3B296D9B6F00D109A1 /* BibliLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A3A296D9B6F00D109A1 /* BibliLogo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +40,11 @@
 		2BDC39FE2965812100D109A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BDC3A032965A40400D109A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/quotes.json; sourceTree = "<group>"; };
 		2BDC3A062965A40F00D109A1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ar; path = ar.lproj/quotesAr.json; sourceTree = "<group>"; };
-		2BDC3A29296D878F00D109A1 /* onBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoarding.swift; sourceTree = "<group>"; };
+		2BDC3A29296D878F00D109A1 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
+		2BDC3A2B296D8C4500D109A1 /* AnimatedLogoI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLogoI.swift; sourceTree = "<group>"; };
+		2BDC3A34296D984400D109A1 /* OnBoardings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardings.swift; sourceTree = "<group>"; };
+		2BDC3A36296D9A9200D109A1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		2BDC3A3A296D9B6F00D109A1 /* BibliLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = BibliLogo.gif; path = ../../../../../Downloads/BibliLogo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDC3A2F296D8CBD00D109A1 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +137,11 @@
 		2BDC3A28296D877500D109A1 /* On Boardings */ = {
 			isa = PBXGroup;
 			children = (
-				2BDC3A29296D878F00D109A1 /* onBoarding.swift */,
+				2BDC3A3A296D9B6F00D109A1 /* BibliLogo.gif */,
+				2BDC3A36296D9A9200D109A1 /* SplashView.swift */,
+				2BDC3A29296D878F00D109A1 /* OnBoarding.swift */,
+				2BDC3A34296D984400D109A1 /* OnBoardings.swift */,
+				2BDC3A2B296D8C4500D109A1 /* AnimatedLogoI.swift */,
 			);
 			path = "On Boardings";
 			sourceTree = "<group>";
@@ -148,6 +162,9 @@
 			dependencies = (
 			);
 			name = NanoChallenge;
+			packageProductDependencies = (
+				2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */,
+			);
 			productName = NanoChallenge;
 			productReference = 2BDC39DA2964278200D109A1 /* NanoChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +195,7 @@
 			);
 			mainGroup = 2BDC39D12964278200D109A1;
 			packageReferences = (
+				2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 			);
 			productRefGroup = 2BDC39DB2964278200D109A1 /* Products */;
 			projectDirPath = "";
@@ -195,6 +213,7 @@
 			files = (
 				2BDC3A052965A40F00D109A1 /* quotesAr.json in Resources */,
 				2BDC39E52964278300D109A1 /* Preview Assets.xcassets in Resources */,
+				2BDC3A3B296D9B6F00D109A1 /* BibliLogo.gif in Resources */,
 				2BDC39FB296580EE00D109A1 /* Localizable.strings in Resources */,
 				2BDC39E22964278300D109A1 /* Assets.xcassets in Resources */,
 				2BDC3A022965A40400D109A1 /* quotes.json in Resources */,
@@ -211,9 +230,12 @@
 				2BDC39F3296435F500D109A1 /* QuotesService.swift in Sources */,
 				2BDC39F729644D0F00D109A1 /* QuoteView.swift in Sources */,
 				2BDC39E02964278200D109A1 /* ContentView.swift in Sources */,
-				2BDC3A2A296D878F00D109A1 /* onBoarding.swift in Sources */,
+				2BDC3A2A296D878F00D109A1 /* OnBoarding.swift in Sources */,
+				2BDC3A35296D984400D109A1 /* OnBoardings.swift in Sources */,
 				2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */,
 				2BDC39F029642B7500D109A1 /* Quotes.swift in Sources */,
+				2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */,
+				2BDC3A2C296D8C4500D109A1 /* AnimatedLogoI.swift in Sources */,
 				2BDC39F5296448A500D109A1 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BDC39D22964278200D109A1 /* Project object */;
 }

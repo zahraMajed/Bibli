@@ -7,33 +7,53 @@
 
 import SwiftUI
 
-struct onBoarding: View {
+struct OnBoarding: View {
     //MARK: vars
     let isArabic = Locale.current.languageCode == "ar" ? true : false
     //MARK: body
     var body: some View {
-        ZStack {
-            
-            Image("quoteOwner")
+        VStack {
+            Spacer()
+            Image("Logo")
                 .resizable()
-                .scaledToFill()
-                .frame(width: 345, height: 554)
-                .cornerRadius(12)
-                .clipShape(QuoteShape())
-                .flipsForRightToLeftLayoutDirection(isArabic)
-            
-            VStack (alignment: .leading){
-                Text("onBoardingHeadline")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 2.0)
-                Text("onBoardingSubHeadline")
-                    .font(.headline)
-                    .fontWeight(.light)
-                    .multilineTextAlignment(.leading)
-                    .frame(width: 204)
+                .frame(width: 130, height: 57.62)
+            Spacer()
+            ZStack {
+                Image("quoteOwner")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 345, height: 554)
+                    .cornerRadius(12)
+                    .clipShape(QuoteShape())
+                    .flipsForRightToLeftLayoutDirection(isArabic)
+                
+                VStack (alignment: .leading){
+                    Text("onBoardingHeadline")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 2.0)
+                    Text("onBoardingSubHeadline")
+                        .font(.headline)
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.leading)
+                        .frame(width: 204)
+                }
+                .position(x: 130, y: 525)
             }
-            .position(x: 130, y: 570)
+            Spacer()
+            /*Button {
+                // go to notification
+            } label: {
+                Image(systemName: "arrow.right")
+                    .foregroundColor(Color.white)
+                    .frame(width: 40, height: 40)
+                    .background(
+                        Rectangle()
+                            .fill(Color("LightBlueP"))
+                    )
+                    .cornerRadius(8)
+            }*/
+            //Spacer()
         }
     }
 }
@@ -84,6 +104,6 @@ struct QuoteShape: Shape {
 
 struct onBoarding_Previews: PreviewProvider {
     static var previews: some View {
-        onBoarding()
+        OnBoarding()
     }
 }
