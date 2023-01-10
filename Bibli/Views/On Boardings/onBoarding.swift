@@ -32,11 +32,16 @@ struct OnBoarding: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .padding(.bottom, 2.0)
+                        .accessibilityLabel("onBoardingHeadline")
+                        .accessibilityRemoveTraits(.isStaticText)
+                    
                     Text("onBoardingSubHeadline")
                         .font(.headline)
                         .fontWeight(.light)
                         .multilineTextAlignment(.leading)
                         .frame(width: 204)
+                        .accessibilityLabel("onBoardingSubHeadlineVoiceOver")
+                        .accessibilityRemoveTraits(.isStaticText)
                 }
                 .position(x: 130, y: 525)
             }

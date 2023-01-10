@@ -9,6 +9,7 @@
 "hello_text" = "Hello, Angelo!";
 "onBoardingHeadline" = "Hello!";
 "onBoardingSubHeadline" = "My idea is to give hope, because where there is no hope, there is no vision, and where there is no vision, people will perish.";
+"onBoardingSubHeadlineVoiceOver" = "Oprah Winfre said My idea is to give hope, because where there is no hope, there is no vision, and where there is no vision, people will perish."
 "Notifications" = "Notifications";
 "pick time" = "Pick time";
 "Start at :" = "Start at :";
