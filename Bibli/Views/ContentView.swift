@@ -18,40 +18,31 @@ struct ContentView: View {
     
     //MARK: body
     var body: some View {
-        ZStack {
+        VStack (alignment: .center) {
             //Quote
             GeometryReader { proxy in
                 TabView {
                     /*ForEach(0...3, id: \.self) { quote in
                         Text("Hello")
-                    }.rotationEffect(.degrees(-90))
-                        .frame(
-                            width: proxy.size.width,
-                            height: proxy.size.height
-                        )*/
+                    }
+                    .rotationEffect(.degrees(-90))
+                    .frame(width: proxy.size.width, height: proxy.size.height )*/
                     
                     if viewModel.quoteService.isArabic {
                         ForEach(arabicQuotes, id: \.self) { quote in
                             QuoteView(quoteAr: quote)
-                        }.rotationEffect(.degrees(-90))
-                            .frame(
-                                width: proxy.size.width,
-                                height: proxy.size.height
-                            )
+                        }
+                        .rotationEffect(.degrees(-90))
+                        .frame(width: proxy.size.width , height: proxy.size.height )
                     } else {
                         ForEach(allQuotes, id: \.self) { quote in
                             QuoteView(quote: quote)
-                        }.rotationEffect(.degrees(-90))
-                            .frame(
-                                width: proxy.size.width,
-                                height: proxy.size.height
-                            )
+                        }
+                        .rotationEffect(.degrees(-90))
+                        .frame( width: proxy.size.width , height: proxy.size.height )
                     }
                 }
-                .frame(
-                    width: proxy.size.height,
-                    height: proxy.size.width
-                )
+                .frame(width: proxy.size.height, height: proxy.size.width)
                 .rotationEffect(.degrees(90), anchor: .topLeading)
                 .offset(x: proxy.size.width)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -65,8 +56,8 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 12)
+                .ignoresSafeArea()
         )
-        .ignoresSafeArea()
         .fullScreenCover(isPresented: $shouldShowOnboarding) {
             OnBoardings(shouldShowOnboarding: $shouldShowOnboarding)
         }

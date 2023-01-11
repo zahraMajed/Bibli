@@ -20,20 +20,19 @@ struct QuoteView: View {
                 .font(.title2)
                 .fontWeight(.semibold)
                 .foregroundColor(Color.white)
+                .padding([.top, .leading, .trailing])
+                .frame(width: UIScreen.main.bounds.width * 0.99)
             Text(isArabic ? quoteAr!.author : getQuoteAndAuthor(quote: quote!).1)
                 .font(.headline)
                 .fontWeight(.light)
                 .foregroundColor(Color.white)
-                
+                .padding([.leading, .bottom, .trailing])
+                .frame(width: UIScreen.main.bounds.width * 0.99)
         }
         .multilineTextAlignment(.center)
-        .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
-        .background(
-            RoundedRectangle(cornerRadius: 14)
-                .fill(Color("DarkBrownS").opacity(0.93))
-        )
-        .frame(width: 345, alignment: .center)
         .accessibilityLabel(isArabic ? "\(quoteAr!.author) said \(quoteAr!.quote)" : "\(getQuoteAndAuthor(quote: quote!).1) said \(getQuoteAndAuthor(quote: quote!).0)")
+        .background(Color("DarkBrownS").opacity(0.93))
+        .cornerRadius(14)
         
     }
     //MARK: functions

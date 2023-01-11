@@ -35,9 +35,7 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 24 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let quote =  quoteService.getRandomQuote()
-            var entry = SimpleEntry(date: entryDate, quote: quote)
-            entries.append(entry)
+            entries.append(SimpleEntry(date: entryDate, quote: quoteService.getRandomQuote()))
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
