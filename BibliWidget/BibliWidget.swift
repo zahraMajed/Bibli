@@ -32,7 +32,6 @@ struct Provider: TimelineProvider {
         
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 24 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -53,7 +52,7 @@ struct SimpleEntry: TimelineEntry {
     let quote: Quote
 }
 
-// root view of your widget
+// This will be the starting point of all your widget’s views (root view of your widget)
 struct BibliWidgetEntryView : View {
     var entry: Provider.Entry
 
@@ -84,7 +83,7 @@ struct WidgetQuoteView: View {
     }
 }
 
-
+//The `@main` declaration before the struct means this is the entry point for your app’s widget experience.
 @main
 struct BibliWidget: Widget {
     let kind: String = "BibliWidget"
@@ -95,22 +94,17 @@ struct BibliWidget: Widget {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.brown)
         }
+        //show up when the user is adding the Widget to their home screen:
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
 
-        /*
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            BibliWidgetEntryView(entry: entry)
-        }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")*/
     }
 }
 
-/*struct BibliWidget_Previews: PreviewProvider {
+struct BibliWidget_Previews: PreviewProvider {
     static var previews: some View {
-        BibliWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        BibliWidgetEntryView(entry: SimpleEntry(date: Date(), quote: QuoteService().getRandomQuote()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
-*/
+
