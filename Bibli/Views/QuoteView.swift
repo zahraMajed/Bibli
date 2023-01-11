@@ -13,20 +13,27 @@ struct QuoteView: View {
     public var quote: Quote?
     public var quoteAr: QuoteAr?
     
+    //MARK: body
     var body: some View {
         VStack {
-            Text(isArabic ? quoteAr!.quote : quote!.quote)
+            Text(isArabic ? quoteAr!.quote : getQuoteAndAuthor(quote: quote!).0)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
-                .shadow(color: .black, radius: 2)
-                .accessibilityLabel(isArabic ? quoteAr!.quote : quote!.quote)
-            Text(isArabic ? quoteAr!.author : quote!.category)
+                .foregroundColor(Color.black)
+                .padding(.bottom, 10)
+            Text(isArabic ? quoteAr!.author : getQuoteAndAuthor(quote: quote!).1)
                 .font(.system(size: 18, weight: .light, design: .rounded))
-                .shadow(color: .black, radius: 2)
-                .accessibilityLabel(isArabic ? quoteAr!.author : quote!.category)
+                .foregroundColor(Color.black)
+                .padding(.bottom, 10)
         }
+        .accessibilityLabel(isArabic ? "\(quoteAr!.author) said \(quoteAr!.quote)" : "\(getQuoteAndAuthor(quote: quote!).1) said \(getQuoteAndAuthor(quote: quote!).0)")
         .frame(maxWidth: .infinity, alignment: .center)
         .multilineTextAlignment(.center)
         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+    }
+    //MARK: functions
+    func getQuoteAndAuthor(quote: Quote) -> (String, String) {
+        let components = quote.quote.components(separatedBy: "—")
+        return (components[0], components[1])
     }
 }
 

@@ -67,10 +67,11 @@ struct WidgetQuoteView: View {
         VStack(alignment: .center) {
             Text(getQuoteAndAuthor(quote: quote).0)
                 .font(.system(size: 18, weight: .bold, design: .rounded))
-                .shadow(color: .black, radius: 2)
+                .foregroundColor(Color.black)
+                .padding(.bottom, 10)
             Text(getQuoteAndAuthor(quote: quote).1)
                 .font(.system(size: 16, weight: .light, design: .rounded))
-                .shadow(color: .black, radius: 2)
+                .foregroundColor(Color.black)
         }
         .padding()
         .foregroundColor(.white)
@@ -92,8 +93,8 @@ struct BibliWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             BibliWidgetEntryView(entry: entry)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.brown)
         }
+        .supportedFamilies([.systemMedium, .systemLarge])
         //show up when the user is adding the Widget to their home screen:
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
@@ -104,7 +105,7 @@ struct BibliWidget: Widget {
 struct BibliWidget_Previews: PreviewProvider {
     static var previews: some View {
         BibliWidgetEntryView(entry: SimpleEntry(date: Date(), quote: QuoteService().getRandomQuote()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
 

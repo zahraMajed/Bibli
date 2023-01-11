@@ -34,6 +34,8 @@
 		2BDC3A74296EB1F500D109A1 /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39F2296435F500D109A1 /* QuotesService.swift */; };
 		2BDC3A75296EB21200D109A1 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39EF29642B7500D109A1 /* Quotes.swift */; };
 		2BDC3A78296EB24400D109A1 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2BDC3A77296EB24400D109A1 /* FLAnimatedImage */; };
+		2BDC3A7A296EBE2F00D109A1 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A042965A40400D109A1 /* quotes.json */; };
+		2BDC3A7B296EBE3300D109A1 /* quotesAr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A072965A40F00D109A1 /* quotesAr.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,14 +51,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		2BDC3A71296EA09700D109A1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				2BDC3A6D296EA09700D109A1 /* BibliWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -322,7 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDC3A7A296EBE2F00D109A1 /* quotes.json in Resources */,
 				2BDC3A67296EA09700D109A1 /* Assets.xcassets in Resources */,
+				2BDC3A7B296EBE3300D109A1 /* quotesAr.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
