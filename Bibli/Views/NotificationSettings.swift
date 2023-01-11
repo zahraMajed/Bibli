@@ -28,7 +28,7 @@ struct NotificationSettings: View {
             DatePicker("End at :", selection: $currentTime, displayedComponents: .hourAndMinute)
             
         }
-        if shouldShowOnboarding {
+        if var shouldShowOnboarding {
             Button {
                 shouldShowOnboarding.toggle()
             } label: {
