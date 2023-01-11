@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: vars
-    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = false
     let viewModel = ContentViewModel()
     @State private var allQuotes: [Quote] = []
     @State private var arabicQuotes: [QuoteAr] = []
@@ -22,6 +22,14 @@ struct ContentView: View {
             //Quote
             GeometryReader { proxy in
                 TabView {
+                    /*ForEach(0...3, id: \.self) { quote in
+                        Text("Hello")
+                    }.rotationEffect(.degrees(-90))
+                        .frame(
+                            width: proxy.size.width,
+                            height: proxy.size.height
+                        )*/
+                    
                     if viewModel.quoteService.isArabic {
                         ForEach(arabicQuotes, id: \.self) { quote in
                             QuoteView(quoteAr: quote)
@@ -46,14 +54,19 @@ struct ContentView: View {
                 )
                 .rotationEffect(.degrees(90), anchor: .topLeading)
                 .offset(x: proxy.size.width)
-                .tabViewStyle(
-                    PageTabViewStyle(indexDisplayMode: .never)
-                )
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
         }
         .onAppear{
             onAppear()
         }
+        .background(
+            Image("BackgroundImage")
+                .resizable()
+                .scaledToFill()
+                .blur(radius: 12)
+        )
+        .ignoresSafeArea()
         .fullScreenCover(isPresented: $shouldShowOnboarding) {
             OnBoardings(shouldShowOnboarding: $shouldShowOnboarding)
         }

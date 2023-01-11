@@ -15,20 +15,26 @@ struct QuoteView: View {
     
     //MARK: body
     var body: some View {
-        VStack {
+        VStack (spacing: 20){
             Text(isArabic ? quoteAr!.quote : getQuoteAndAuthor(quote: quote!).0)
-                .font(.system(size: 20, weight: .bold, design: .rounded))
-                .foregroundColor(Color.black)
-                .padding(.bottom, 10)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundColor(Color.white)
             Text(isArabic ? quoteAr!.author : getQuoteAndAuthor(quote: quote!).1)
-                .font(.system(size: 18, weight: .light, design: .rounded))
-                .foregroundColor(Color.black)
-                .padding(.bottom, 10)
+                .font(.headline)
+                .fontWeight(.light)
+                .foregroundColor(Color.white)
+                
         }
-        .accessibilityLabel(isArabic ? "\(quoteAr!.author) said \(quoteAr!.quote)" : "\(getQuoteAndAuthor(quote: quote!).1) said \(getQuoteAndAuthor(quote: quote!).0)")
-        .frame(maxWidth: .infinity, alignment: .center)
         .multilineTextAlignment(.center)
-        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+        .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color("DarkBrownS").opacity(0.93))
+        )
+        .frame(width: 345, alignment: .center)
+        .accessibilityLabel(isArabic ? "\(quoteAr!.author) said \(quoteAr!.quote)" : "\(getQuoteAndAuthor(quote: quote!).1) said \(getQuoteAndAuthor(quote: quote!).0)")
+        
     }
     //MARK: functions
     func getQuoteAndAuthor(quote: Quote) -> (String, String) {

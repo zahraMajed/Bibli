@@ -10,7 +10,7 @@ import SwiftUI
 struct SplashView: View {
     //MARK: vars
     @State private var isSplashActive = true
-    
+    //MARK: body
     var body: some View {
         
         if isSplashActive {
