@@ -25,7 +25,38 @@
 		2BDC3A35296D984400D109A1 /* OnBoardings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A34296D984400D109A1 /* OnBoardings.swift */; };
 		2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A36296D9A9200D109A1 /* SplashView.swift */; };
 		2BDC3A3D296DA04600D109A1 /* BibliLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A3C296DA04600D109A1 /* BibliLogo.gif */; };
+		2BDC3A5F296EA09500D109A1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDC3A5E296EA09500D109A1 /* WidgetKit.framework */; };
+		2BDC3A61296EA09500D109A1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDC3A60296EA09500D109A1 /* SwiftUI.framework */; };
+		2BDC3A64296EA09500D109A1 /* BibliWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A63296EA09500D109A1 /* BibliWidget.swift */; };
+		2BDC3A67296EA09700D109A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A66296EA09700D109A1 /* Assets.xcassets */; };
+		2BDC3A69296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */; };
+		2BDC3A6A296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */; };
+		2BDC3A6D296EA09700D109A1 /* BibliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2BDC3A5C296EA09500D109A1 /* BibliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BDC3A6B296EA09700D109A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BDC39D22964278200D109A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BDC3A5B296EA09500D109A1;
+			remoteInfo = BibliWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BDC3A71296EA09700D109A1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2BDC3A6D296EA09700D109A1 /* BibliWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		050D3B9A296D9F5D0042418C /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
@@ -47,6 +78,13 @@
 		2BDC3A34296D984400D109A1 /* OnBoardings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardings.swift; sourceTree = "<group>"; };
 		2BDC3A36296D9A9200D109A1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2BDC3A3C296DA04600D109A1 /* BibliLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BibliLogo.gif; sourceTree = "<group>"; };
+		2BDC3A5C296EA09500D109A1 /* BibliWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BibliWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BDC3A5E296EA09500D109A1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2BDC3A60296EA09500D109A1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2BDC3A63296EA09500D109A1 /* BibliWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliWidget.swift; sourceTree = "<group>"; };
+		2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BibliWidget.intentdefinition; sourceTree = "<group>"; };
+		2BDC3A66296EA09700D109A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BDC3A68296EA09700D109A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BDC3A59296EA09500D109A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BDC3A61296EA09500D109A1 /* SwiftUI.framework in Frameworks */,
+				2BDC3A5F296EA09500D109A1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +113,8 @@
 			children = (
 				2BDC39FD296580EE00D109A1 /* Localizable.strings */,
 				2BDC39DC2964278200D109A1 /* Bibli */,
+				2BDC3A62296EA09500D109A1 /* BibliWidget */,
+				2BDC3A5D296EA09500D109A1 /* Frameworks */,
 				2BDC39DB2964278200D109A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2BDC39DA2964278200D109A1 /* NanoChallenge.app */,
+				2BDC3A5C296EA09500D109A1 /* BibliWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +199,26 @@
 			path = "On Boardings";
 			sourceTree = "<group>";
 		};
+		2BDC3A5D296EA09500D109A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BDC3A5E296EA09500D109A1 /* WidgetKit.framework */,
+				2BDC3A60296EA09500D109A1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BDC3A62296EA09500D109A1 /* BibliWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2BDC3A63296EA09500D109A1 /* BibliWidget.swift */,
+				2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */,
+				2BDC3A66296EA09700D109A1 /* Assets.xcassets */,
+				2BDC3A68296EA09700D109A1 /* Info.plist */,
+			);
+			path = BibliWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,10 +229,12 @@
 				2BDC39D62964278200D109A1 /* Sources */,
 				2BDC39D72964278200D109A1 /* Frameworks */,
 				2BDC39D82964278200D109A1 /* Resources */,
+				2BDC3A71296EA09700D109A1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BDC3A6C296EA09700D109A1 /* PBXTargetDependency */,
 			);
 			name = NanoChallenge;
 			packageProductDependencies = (
@@ -171,6 +243,23 @@
 			productName = NanoChallenge;
 			productReference = 2BDC39DA2964278200D109A1 /* NanoChallenge.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2BDC3A5B296EA09500D109A1 /* BibliWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BDC3A6E296EA09700D109A1 /* Build configuration list for PBXNativeTarget "BibliWidgetExtension" */;
+			buildPhases = (
+				2BDC3A58296EA09500D109A1 /* Sources */,
+				2BDC3A59296EA09500D109A1 /* Frameworks */,
+				2BDC3A5A296EA09500D109A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BibliWidgetExtension;
+			productName = BibliWidgetExtension;
+			productReference = 2BDC3A5C296EA09500D109A1 /* BibliWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -183,6 +272,9 @@
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					2BDC39D92964278200D109A1 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					2BDC3A5B296EA09500D109A1 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
@@ -205,6 +297,7 @@
 			projectRoot = "";
 			targets = (
 				2BDC39D92964278200D109A1 /* NanoChallenge */,
+				2BDC3A5B296EA09500D109A1 /* BibliWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +313,14 @@
 				2BDC39FB296580EE00D109A1 /* Localizable.strings in Resources */,
 				2BDC39E22964278300D109A1 /* Assets.xcassets in Resources */,
 				2BDC3A022965A40400D109A1 /* quotes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDC3A5A296EA09500D109A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BDC3A67296EA09700D109A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +342,28 @@
 				2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */,
 				2BDC3A2C296D8C4500D109A1 /* AnimatedLogoI.swift in Sources */,
 				2BDC39F5296448A500D109A1 /* ContentViewModel.swift in Sources */,
+				2BDC3A6A296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDC3A58296EA09500D109A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BDC3A64296EA09500D109A1 /* BibliWidget.swift in Sources */,
+				2BDC3A69296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BDC3A6C296EA09700D109A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BDC3A5B296EA09500D109A1 /* BibliWidgetExtension */;
+			targetProxy = 2BDC3A6B296EA09700D109A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2BDC39FD296580EE00D109A1 /* Localizable.strings */ = {
@@ -392,6 +511,7 @@
 		2BDC39E92964278300D109A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -421,6 +541,7 @@
 		2BDC39EA2964278300D109A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +568,60 @@
 			};
 			name = Release;
 		};
+		2BDC3A6F296EA09700D109A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7MYQ7W5DQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NanoChallenge.BibliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BDC3A70296EA09700D109A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7MYQ7W5DQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NanoChallenge.BibliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +639,15 @@
 			buildConfigurations = (
 				2BDC39E92964278300D109A1 /* Debug */,
 				2BDC39EA2964278300D109A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BDC3A6E296EA09700D109A1 /* Build configuration list for PBXNativeTarget "BibliWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDC3A6F296EA09700D109A1 /* Debug */,
+				2BDC3A70296EA09700D109A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
