@@ -50,7 +50,7 @@ struct QuotesView: View {
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 12)
-                .ignoresSafeArea()
+                //.ignoresSafeArea()
         )
     }
     //MARK: functions

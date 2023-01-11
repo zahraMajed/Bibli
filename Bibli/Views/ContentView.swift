@@ -16,10 +16,11 @@ struct ContentView: View {
     var body: some View {
         TabView {
             QuotesView()
-                .tabItem{Label("Quotes", systemImage: "creditcard")}
+                .tabItem{Label("Quotes", systemImage: "quote.opening")}
             NotificationSettings(shouldShowOnboarding: $shouldShowOnboarding)
-                .tabItem { Label("Settings", systemImage: "chart.bar") }
+                .tabItem { Label("Notifications", systemImage: "bell") }
         }
+        .accentColor(Color("LightBlueP"))
         .fullScreenCover(isPresented: $shouldShowOnboarding) {
             OnBoardings(shouldShowOnboarding: $shouldShowOnboarding)}
     }
