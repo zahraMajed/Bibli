@@ -21,7 +21,6 @@
 		2BDC3A052965A40F00D109A1 /* quotesAr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A072965A40F00D109A1 /* quotesAr.json */; };
 		2BDC3A2A296D878F00D109A1 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A29296D878F00D109A1 /* OnBoarding.swift */; };
 		2BDC3A2C296D8C4500D109A1 /* AnimatedLogoI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A2B296D8C4500D109A1 /* AnimatedLogoI.swift */; };
-		2BDC3A2F296D8CBD00D109A1 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */; };
 		2BDC3A35296D984400D109A1 /* OnBoardings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A34296D984400D109A1 /* OnBoardings.swift */; };
 		2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A36296D9A9200D109A1 /* SplashView.swift */; };
 		2BDC3A3D296DA04600D109A1 /* BibliLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A3C296DA04600D109A1 /* BibliLogo.gif */; };
@@ -32,6 +31,9 @@
 		2BDC3A69296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */; };
 		2BDC3A6A296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A65296EA09500D109A1 /* BibliWidget.intentdefinition */; };
 		2BDC3A6D296EA09700D109A1 /* BibliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2BDC3A5C296EA09500D109A1 /* BibliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BDC3A74296EB1F500D109A1 /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39F2296435F500D109A1 /* QuotesService.swift */; };
+		2BDC3A75296EB21200D109A1 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39EF29642B7500D109A1 /* Quotes.swift */; };
+		2BDC3A78296EB24400D109A1 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2BDC3A77296EB24400D109A1 /* FLAnimatedImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		2BDC3A71296EA09700D109A1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				2BDC3A6D296EA09700D109A1 /* BibliWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -92,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BDC3A2F296D8CBD00D109A1 /* FLAnimatedImage in Frameworks */,
+				2BDC3A78296EB24400D109A1 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +240,7 @@
 			);
 			name = NanoChallenge;
 			packageProductDependencies = (
-				2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */,
+				2BDC3A77296EB24400D109A1 /* FLAnimatedImage */,
 			);
 			productName = NanoChallenge;
 			productReference = 2BDC39DA2964278200D109A1 /* NanoChallenge.app */;
@@ -290,7 +292,7 @@
 			);
 			mainGroup = 2BDC39D12964278200D109A1;
 			packageReferences = (
-				2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				2BDC3A76296EB24400D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 			);
 			productRefGroup = 2BDC39DB2964278200D109A1 /* Products */;
 			projectDirPath = "";
@@ -350,7 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDC3A75296EB21200D109A1 /* Quotes.swift in Sources */,
 				2BDC3A64296EA09500D109A1 /* BibliWidget.swift in Sources */,
+				2BDC3A74296EB1F500D109A1 /* QuotesService.swift in Sources */,
 				2BDC3A69296EA09700D109A1 /* BibliWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,20 +659,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+		2BDC3A76296EB24400D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage.git";
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BDC3A2E296D8CBD00D109A1 /* FLAnimatedImage */ = {
+		2BDC3A77296EB24400D109A1 /* FLAnimatedImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2BDC3A2D296D8CBD00D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			package = 2BDC3A76296EB24400D109A1 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
 			productName = FLAnimatedImage;
 		};
 /* End XCSwiftPackageProductDependency section */
