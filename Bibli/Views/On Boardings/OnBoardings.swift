@@ -14,7 +14,7 @@ struct OnBoardings: View {
     var body: some View {
         TabView{
             OnBoarding()
-            NotificationSettings()
+            NotificationSettings(shouldShowOnboarding: $shouldShowOnboarding)
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(.page(backgroundDisplayMode: .always))
