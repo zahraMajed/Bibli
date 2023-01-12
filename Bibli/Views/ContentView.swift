@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: vars
-    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = false
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     //MARK: body
     var body: some View {
