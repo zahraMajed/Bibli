@@ -10,7 +10,8 @@ import SwiftUI
 struct NotificationSettings: View {
     //MARK: vars
     let notify = NotificationHandler()
-    @State var currentTime = Date()
+    @State var startDate = Date()
+    @State var endDate = Date()
     var closedRange = Calendar.current.date (byAdding: .year, value: -1, to: Date())!
     @Binding var shouldShowOnboarding: Bool
 
@@ -23,15 +24,15 @@ struct NotificationSettings: View {
                 .multilineTextAlignment(.center)
             
             Section(header:Text("pick time")) {
-                
-                DatePicker("Start at :", selection: $currentTime, displayedComponents: .hourAndMinute)
+                DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
             }
-            DatePicker("End at :", selection: $currentTime, displayedComponents: .hourAndMinute)
+            DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
             
         }
         if shouldShowOnboarding {
             Button {
-                shouldShowOnboarding = false
+                //shouldShowOnboarding = false
+                notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
                 Image(systemName: "arrow.right")
                     .foregroundColor(Color.white)
@@ -45,8 +46,10 @@ struct NotificationSettings: View {
         } else {
             //save changes button
         }
-    }
-        
+        }
+        .onAppear{
+            notify.askPermission()
+        }
         
     }
 }
@@ -59,21 +62,3 @@ struct NotificationSettings_Previews: PreviewProvider {
         }
     }
 }
-
-/*
- 
-  Button ( "Schedule Notification") {
-      notify.sendNotification (
-          date: selectedDate ,
-          type: "date",
-          title: "Bibli",
-          body: "Today's Quote")
-      }.tint(.orange)
-  Spacer()
-  Text("Not working?")
-      .foregroundColor(.gray)
-      .italic()
-  Button("Request Permissions") {
-      notify.askPermission()
-  }
- */

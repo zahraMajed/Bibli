@@ -12,7 +12,7 @@ struct BibliApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            NotificationSettings(shouldShowOnboarding: .constant(true))
                 //.environment(\.locale, .init(identifier: "ar"))
         }
     }

@@ -100,6 +100,10 @@ public struct QuoteService {
         return quote
     }
     
-    
+    //MARK: get a Random Arabic Quote
+    public func getRandomQuoteAr() -> QuoteAr {
+        return quotesArArr.randomElement()!
+    }
+
     
 }

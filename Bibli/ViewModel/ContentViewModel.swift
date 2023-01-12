@@ -17,11 +17,20 @@ struct ContentViewModel {
         let categoryQuotes = quoteService.getQuotesOf(category: category)
         return categoryQuotes.shuffled()
     }
+    //MARK: getgetRandomQuote
+    func getRandomQuote() -> String {
+        return quoteService.getRandomQuote().quote
+    }
     
     //MARK: get all abrabic quotes
     ///Return all arabic quotes
     func getArabicQuotes() -> [QuoteAr] {
         return quoteService.quotesArArr
+    }
+    
+    //MARK: get random abrabic quotes
+    func getRandomQuoteAr() -> String {
+        return quoteService.getRandomQuoteAr().quote
     }
     
 }
