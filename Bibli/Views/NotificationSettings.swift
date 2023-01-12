@@ -21,13 +21,14 @@ struct NotificationSettings: View {
                 .font(.title)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
-           
-            Form {
-                Section(header:Text("pick time")) {
-                    DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
-                    DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
-                }
-            }
+            VStack(){
+                DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
+                    .background(Color("DarkBrownS").opacity(0.93))
+                    .cornerRadius(12)
+                    .foregroundColor(.white)
+                DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
+            }.padding()
+
                 
             if shouldShowOnboarding {
             Button {
