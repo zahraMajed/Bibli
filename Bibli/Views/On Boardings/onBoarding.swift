@@ -97,6 +97,12 @@ struct QuoteShape: Shape {
 
 struct onBoarding_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoarding()
+        Group {
+            OnBoarding()
+                .preferredColorScheme(.light)
+            
+            OnBoarding()
+                .preferredColorScheme(.dark)
+        }
     }
 }
