@@ -17,21 +17,21 @@ struct NotificationSettings: View {
 
     var body: some View {
         VStack {
-        Form {
             Text("Notifications")
                 .font(.title)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
-            
-            Section(header:Text("pick time")) {
-                DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
+           
+            Form {
+                Section(header:Text("pick time")) {
+                    DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
+                    DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
+                }
             }
-            DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
-            
-        }
-        if shouldShowOnboarding {
+                
+            if shouldShowOnboarding {
             Button {
-                //shouldShowOnboarding = false
+                shouldShowOnboarding = false
                 notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
                 Image(systemName: "arrow.right")
