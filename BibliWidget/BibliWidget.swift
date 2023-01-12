@@ -11,6 +11,7 @@ import Intents
 
 //retrieve data for your widgets while they are in various states
 struct Provider: TimelineProvider {
+    
     let quoteService = QuoteService()
     
     //1- Placeholders are basically the loading state of the widget, this method has to return some value instantly
