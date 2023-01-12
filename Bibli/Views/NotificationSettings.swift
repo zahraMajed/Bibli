@@ -52,6 +52,9 @@ struct NotificationSettings: View {
 
 struct NotificationSettings_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationSettings(shouldShowOnboarding: .constant(true))
+        Group {
+            NotificationSettings(shouldShowOnboarding: .constant(true)).preferredColorScheme(.light)
+            NotificationSettings(shouldShowOnboarding: .constant(true)).preferredColorScheme(.dark)
+        }
     }
 }
