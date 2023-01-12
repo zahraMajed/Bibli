@@ -15,7 +15,7 @@ struct SplashView: View {
         
         if isSplashActive {
             GIFView(type: .name("BibliLogo"))
-                .frame(width: 390, height: 500)
+                .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height * 0.58)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                         self.isSplashActive = false

@@ -34,7 +34,6 @@ struct OnBoarding: View {
                 Text("onBoardingHeadline")
                     .font(.title)
                     .fontWeight(.semibold)
-                //.frame(width: Proxy.size.width * 0.55, alignment: .leading)
                     .padding(.bottom, 2.0)
                     .accessibilityLabel("onBoardingHeadline")
                     .accessibilityRemoveTraits(.isStaticText)
@@ -43,7 +42,6 @@ struct OnBoarding: View {
                     .font(.headline)
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
-                //.frame(width: Proxy.size.width * 0.55, height: .infinity ,alignment: .leading)
                     .accessibilityLabel("onBoardingSubHeadlineVoiceOver")
                     .accessibilityRemoveTraits(.isStaticText)
             }

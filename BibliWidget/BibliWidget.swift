@@ -64,11 +64,13 @@ struct WidgetQuoteView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text(getQuoteAndAuthor(quote: quote).0)
-                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .font(.headline)
+                .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .padding(.bottom, 10)
             Text(getQuoteAndAuthor(quote: quote).1)
-                .font(.system(size: 16, weight: .light, design: .rounded))
+                .font(.subheadline)
+                .fontWeight(.light)
                 .foregroundColor(Color.black)
         }
         .padding()

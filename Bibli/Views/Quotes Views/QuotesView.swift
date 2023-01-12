@@ -50,12 +50,10 @@ struct QuotesView: View {
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 12)
-                //.ignoresSafeArea()
         )
     }
     //MARK: functions
     private func onAppear() {
-        //currentCategory = UserDefaults.standard.string(forKey: "currentCategory") ?? "inspirational"
         if viewModel.quoteService.isArabic {
             arabicQuotes = viewModel.getArabicQuotes()
         } else {
