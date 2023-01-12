@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NotificationSettings: View {
     //MARK: vars
+    let notify = NotificationHandler()
     @State var currentTime = Date()
     var closedRange = Calendar.current.date (byAdding: .year, value: -1, to: Date())!
     @Binding var shouldShowOnboarding: Bool
@@ -58,3 +59,21 @@ struct NotificationSettings_Previews: PreviewProvider {
         }
     }
 }
+
+/*
+ 
+  Button ( "Schedule Notification") {
+      notify.sendNotification (
+          date: selectedDate ,
+          type: "date",
+          title: "Bibli",
+          body: "Today's Quote")
+      }.tint(.orange)
+  Spacer()
+  Text("Not working?")
+      .foregroundColor(.gray)
+      .italic()
+  Button("Request Permissions") {
+      notify.askPermission()
+  }
+ */

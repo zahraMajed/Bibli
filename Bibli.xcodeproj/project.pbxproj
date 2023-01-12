@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		050D3B9B296D9F5D0042418C /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D3B9A296D9F5D0042418C /* NotificationSettings.swift */; };
+		05AD9332297049F600876E15 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD9331297049F600876E15 /* NotificationHandler.swift */; };
 		2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DD2964278200D109A1 /* BibliApp.swift */; };
 		2BDC39E02964278200D109A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC39DF2964278200D109A1 /* ContentView.swift */; };
 		2BDC39E22964278300D109A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC39E12964278300D109A1 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		050D3B9A296D9F5D0042418C /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
+		05AD9331297049F600876E15 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		2BDC39DA2964278200D109A1 /* NanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDC39DD2964278200D109A1 /* BibliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliApp.swift; sourceTree = "<group>"; };
 		2BDC39DF2964278200D109A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05AD9330297049E100876E15 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				05AD9331297049F600876E15 /* NotificationHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		2BDC39D12964278200D109A1 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		2BDC39DC2964278200D109A1 /* Bibli */ = {
 			isa = PBXGroup;
 			children = (
+				05AD9330297049E100876E15 /* Handlers */,
 				2BDC3A042965A40400D109A1 /* quotes.json */,
 				2BDC3A072965A40F00D109A1 /* quotesAr.json */,
 				2BDC39F1296435D700D109A1 /* Service */,
@@ -361,6 +372,7 @@
 				2BDC39DE2964278200D109A1 /* BibliApp.swift in Sources */,
 				2BDC3A80296EE52F00D109A1 /* QuotesView.swift in Sources */,
 				2BDC39F029642B7500D109A1 /* Quotes.swift in Sources */,
+				05AD9332297049F600876E15 /* NotificationHandler.swift in Sources */,
 				2BDC3A37296D9A9200D109A1 /* SplashView.swift in Sources */,
 				2BDC3A2C296D8C4500D109A1 /* AnimatedLogoI.swift in Sources */,
 				2BDC39F5296448A500D109A1 /* ContentViewModel.swift in Sources */,
