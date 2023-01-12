@@ -12,53 +12,44 @@ struct OnBoarding: View {
     let isArabic = Locale.current.languageCode == "ar" ? true : false
     //MARK: body
     var body: some View {
-        VStack {
-            Spacer()
+        
+        GeometryReader { Proxy in
+            //Logo
             Image("Logo")
                 .resizable()
-                .frame(width: 130, height: 57.62)
-            Spacer()
-            ZStack {
-                Image("quoteOwner")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 345, height: 554)
-                    .cornerRadius(12)
-                    .clipShape(QuoteShape())
-                    .flipsForRightToLeftLayoutDirection(isArabic)
+                .frame(width: Proxy.size.width * 0.33, height: Proxy.size.height * 0.06)
+                .position(x: Proxy.size.width / 2, y: Proxy.size.height * 0.055)
+            //Image
+            Image("quoteOwner")
+                .resizable()
+                .scaledToFill()
+                .frame(width: Proxy.size.width * 0.87, height: Proxy.size.height * 0.72)
+                .cornerRadius(12)
+                .clipShape(QuoteShape().path(in: Proxy.frame(in: .global)))
+                .position(x: Proxy.size.width / 2, y: Proxy.size.height / 2)
+                .flipsForRightToLeftLayoutDirection(isArabic)
+            
+            //Text
+            VStack (alignment: .leading){
+                Text("onBoardingHeadline")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                //.frame(width: Proxy.size.width * 0.55, alignment: .leading)
+                    .padding(.bottom, 2.0)
+                    .accessibilityLabel("onBoardingHeadline")
+                    .accessibilityRemoveTraits(.isStaticText)
                 
-                VStack (alignment: .leading){
-                    Text("onBoardingHeadline")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 2.0)
-                        .accessibilityLabel("onBoardingHeadline")
-                        .accessibilityRemoveTraits(.isStaticText)
-                    
-                    Text("onBoardingSubHeadline")
-                        .font(.headline)
-                        .fontWeight(.light)
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 204)
-                        .accessibilityLabel("onBoardingSubHeadlineVoiceOver")
-                        .accessibilityRemoveTraits(.isStaticText)
-                }
-                .position(x: 130, y: 525)
+                Text("onBoardingSubHeadline")
+                    .font(.headline)
+                    .fontWeight(.light)
+                    .multilineTextAlignment(.leading)
+                //.frame(width: Proxy.size.width * 0.55, height: .infinity ,alignment: .leading)
+                    .accessibilityLabel("onBoardingSubHeadlineVoiceOver")
+                    .accessibilityRemoveTraits(.isStaticText)
             }
-            Spacer()
-            /*Button {
-                // go to notification
-            } label: {
-                Image(systemName: "arrow.right")
-                    .foregroundColor(Color.white)
-                    .frame(width: 40, height: 40)
-                    .background(
-                        Rectangle()
-                            .fill(Color("LightBlueP"))
-                    )
-                    .cornerRadius(8)
-            }*/
-            //Spacer()
+            .frame(width: Proxy.size.width * 0.55, height:.infinity, alignment: .leading)
+            .position(x: Proxy.size.width * 0.33, y: Proxy.size.height * 0.759)
+            
         }
     }
 }
@@ -66,44 +57,43 @@ struct OnBoarding: View {
 struct QuoteShape: Shape {
     func path(in rect: CGRect) -> Path {
         Path { path in
-             path.move(
-                 to: CGPoint(
-                    x: 0 ,
-                     y: 0
-                 )
-             )
-             path.addLine(
-                 to: CGPoint(
-                    x: 0 ,
-                     y: 370.24 )
-             )
-             path.addLine(
-                 to: CGPoint(
-                     x: 224 ,
-                     y: 370.24 )
-             )
-             //curves
-             path.addCurve(
+            path.move(
                 to: CGPoint(
-                x: 224 ,
-                y: 554 ),
-                control1: CGPoint(x: 225 , y: 472),
-                control2: CGPoint(x: 295 , y: 554 ))
-             //curves
-             path.addCurve(
+                    x: 0 ,
+                    y: 0
+                )
+            )
+            path.addLine(
                 to: CGPoint(
-                x: 345 ,
-                y: 370.24 ),
-                control1: CGPoint(x: 295 , y: 554 ),
-                control2: CGPoint(x: 345 , y: 472))
-            
-             path.addLine(
-                 to: CGPoint(
-                     x: 345,
-                     y: 0)
-             )
-             path.closeSubpath()
-         }
+                    x: 0 ,
+                    y: rect.size.height * 0.50 )
+            )
+            path.addLine(
+                to: CGPoint(
+                    x: rect.size.width * 0.569 ,
+                    y: rect.size.height * 0.50 )
+            )
+            //curves
+            path.addCurve(
+                to: CGPoint(
+                    x: rect.size.width * 0.569 ,
+                    y: rect.size.height * 0.72 ),
+                control1: CGPoint(x: rect.size.width *  0.57 , y: rect.size.height * 0.62),
+                control2: CGPoint(x: rect.size.width * 0.75 , y: rect.size.height * 0.72 ))
+            //curves
+            path.addCurve(
+                to: CGPoint(
+                    x: rect.size.width * 0.87 ,
+                    y: rect.size.height * 0.50),
+                control1: CGPoint(x: rect.size.width * 0.75 , y: rect.size.height * 0.72),
+                control2: CGPoint(x: rect.size.width * 0.87 , y: rect.size.height * 0.62))
+            path.addLine(
+                to: CGPoint(
+                    x: rect.size.width * 0.87,
+                    y: 0)
+            )
+            path.closeSubpath()
+        }
     }
 }
 
