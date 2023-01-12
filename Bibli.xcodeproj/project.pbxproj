@@ -37,6 +37,7 @@
 		2BDC3A7A296EBE2F00D109A1 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A042965A40400D109A1 /* quotes.json */; };
 		2BDC3A7B296EBE3300D109A1 /* quotesAr.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A072965A40F00D109A1 /* quotesAr.json */; };
 		2BDC3A80296EE52F00D109A1 /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC3A7F296EE52F00D109A1 /* QuotesView.swift */; };
+		2BDC3A8429702B8D00D109A1 /* BibliLogoDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2BDC3A8329702B8D00D109A1 /* BibliLogoDark.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		2BDC3A66296EA09700D109A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BDC3A68296EA09700D109A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BDC3A7F296EE52F00D109A1 /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
+		2BDC3A8329702B8D00D109A1 /* BibliLogoDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BibliLogoDark.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		2BDC3A28296D877500D109A1 /* On Boardings */ = {
 			isa = PBXGroup;
 			children = (
+				2BDC3A8329702B8D00D109A1 /* BibliLogoDark.gif */,
 				2BDC3A3C296DA04600D109A1 /* BibliLogo.gif */,
 				2BDC3A36296D9A9200D109A1 /* SplashView.swift */,
 				2BDC3A29296D878F00D109A1 /* OnBoarding.swift */,
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BDC3A052965A40F00D109A1 /* quotesAr.json in Resources */,
+				2BDC3A8429702B8D00D109A1 /* BibliLogoDark.gif in Resources */,
 				2BDC39E52964278300D109A1 /* Preview Assets.xcassets in Resources */,
 				2BDC3A3D296DA04600D109A1 /* BibliLogo.gif in Resources */,
 				2BDC39FB296580EE00D109A1 /* Localizable.strings in Resources */,

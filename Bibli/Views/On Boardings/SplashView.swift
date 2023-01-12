@@ -10,11 +10,12 @@ import SwiftUI
 struct SplashView: View {
     //MARK: vars
     @State private var isSplashActive = true
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     //MARK: body
     var body: some View {
         
         if isSplashActive {
-            GIFView(type: .name("BibliLogo"))
+            GIFView(type: .name(colorScheme == .light ? "BibliLogo" : "BibliLogoDark"))
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height * 0.58)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
