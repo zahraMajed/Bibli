@@ -16,49 +16,60 @@ struct NotificationSettings: View {
     @Binding var shouldShowOnboarding: Bool
 
     var body: some View {
-        VStack {
+        VStack(){
+            Spacer()
             Text("Notifications")
                 .font(.title)
-                .fontWeight(.medium)
-                .multilineTextAlignment(.center)
-                .padding(50)
+                .fontWeight(.semibold)
+                
+            Text("NotificationsDes")
+                .font(.headline)
+                .fontWeight(.light)
+                .multilineTextAlignment(.leading)
+                .padding()
+            
+            Spacer()
             VStack(){
                 DatePicker("Start at :", selection: $startDate, displayedComponents: .hourAndMinute)
-                    .background(Color(.lightGray).opacity(0.19))
-                    .cornerRadius(11)
-                    .foregroundColor(.black)
                     .bold()
                     .padding()
                 DatePicker("End at :", selection: $endDate, displayedComponents: .hourAndMinute)
-                    
-                        .background(Color(.lightGray).opacity(0.19))
-                        .cornerRadius(11)
-                        .foregroundColor(.black)
-                        .bold()
-                        .padding()
+                    .bold()
+                    .padding()
             }.padding()
-
-                
-            if shouldShowOnboarding {
+            
+        Spacer()
+        if shouldShowOnboarding {
             Button {
                 shouldShowOnboarding = false
                 notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
-                
-                Text(" Done ")
-            .font(.title2)
-       .fontWeight(.medium)
-       .foregroundColor(Color.white)
-       .multilineTextAlignment(.center)
-       .frame(width: 120, height: 60)
-       .background(Rectangle()
-       .fill(Color("LightBlueP")))
-       .cornerRadius(5)
-       .padding(50)
+                Image(systemName: "arrow.right")
+                    .foregroundColor(Color.white)
+                    .frame(width: 40, height: 40)
+                    .background(
+                        Rectangle()
+                            .fill(Color("LightBlueP"))
+                    )
+                    .cornerRadius(8)
             }
         } else {
-            //save changes button
+            Button {
+                notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
+            } label: {
+                Text(" Done ")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 120, height: 60)
+                    .background(Rectangle()
+                        .fill(Color("LightBlueP")))
+                    .cornerRadius(5)
+                    .padding(50)
+            }
         }
+        Spacer()
         }
         .onAppear{
             notify.askPermission()

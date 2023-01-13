@@ -13,7 +13,6 @@ struct BibliApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()
-                //.environment(\.locale, .init(identifier: "ar"))
         }
     }
 }
