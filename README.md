@@ -33,7 +33,7 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 
 ## Demo
 
-https://user-images.githubusercontent.com/73789363/212322499-25b1efe1-6fb6-4fcd-bb78-c1b1213f44a5.mp4
+https://user-images.githubusercontent.com/73789363/212323176-8e4705f2-23c9-4eea-be89-82a7c4072508.mp4
 
 ## Challenge Summary
 
