@@ -34,3 +34,5 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 ## Demo
 
 ## Challenge Summary
+
+<img width="944" alt="IngenioChallengeSummary" src="https://user-images.githubusercontent.com/73789363/212310985-e21d8d3b-88d9-4097-8fd1-035c2ae09ed1.png">
