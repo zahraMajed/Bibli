@@ -13,6 +13,7 @@ struct NotificationSettings: View {
     @State var startDate = Date()
     @State var endDate = Date()
     var closedRange = Calendar.current.date (byAdding: .year, value: -1, to: Date())!
+    let isArabic = Locale.current.languageCode == "ar" ? true : false
     @Binding var shouldShowOnboarding: Bool
 
     var body: some View {
@@ -44,7 +45,7 @@ struct NotificationSettings: View {
                 shouldShowOnboarding = false
                 notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
-                Image(systemName: "arrow.right")
+                Image(systemName: isArabic ? "arrow.left" : "arrow.right")
                     .foregroundColor(Color.white)
                     .frame(width: 40, height: 40)
                     .background(
@@ -57,16 +58,15 @@ struct NotificationSettings: View {
             Button {
                 notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
-                Text(" Done ")
+                Text("Done")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
-                    .frame(width: 120, height: 60)
+                    .frame(width: 200, height: 43)
                     .background(Rectangle()
                         .fill(Color("LightBlueP")))
-                    .cornerRadius(5)
-                    .padding(50)
+                    .cornerRadius(8)
             }
         }
         Spacer()
