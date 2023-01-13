@@ -21,12 +21,21 @@ struct NotificationSettings: View {
                 .font(.title)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
+                .padding(50)
             VStack(){
-                DatePicker("Start at:", selection: $startDate, displayedComponents: .hourAndMinute)
-                    .background(Color("DarkBrownS").opacity(0.93))
-                    .cornerRadius(12)
-                    .foregroundColor(.white)
-                DatePicker("End at:", selection: $endDate, displayedComponents: .hourAndMinute)
+                DatePicker("Start at :", selection: $startDate, displayedComponents: .hourAndMinute)
+                    .background(Color(.lightGray).opacity(0.19))
+                    .cornerRadius(11)
+                    .foregroundColor(.black)
+                    .bold()
+                    .padding()
+                DatePicker("End at :", selection: $endDate, displayedComponents: .hourAndMinute)
+                    
+                        .background(Color(.lightGray).opacity(0.19))
+                        .cornerRadius(11)
+                        .foregroundColor(.black)
+                        .bold()
+                        .padding()
             }.padding()
 
                 
@@ -35,14 +44,17 @@ struct NotificationSettings: View {
                 shouldShowOnboarding = false
                 notify.scheduleAllNotifications(from: startDate, to: endDate, count: 1)
             } label: {
-                Image(systemName: "arrow.right")
-                    .foregroundColor(Color.white)
-                    .frame(width: 40, height: 40)
-                    .background(
-                        Rectangle()
-                            .fill(Color("LightBlueP"))
-                    )
-                    .cornerRadius(8)
+                
+                Text(" Done ")
+            .font(.title2)
+       .fontWeight(.medium)
+       .foregroundColor(Color.white)
+       .multilineTextAlignment(.center)
+       .frame(width: 120, height: 60)
+       .background(Rectangle()
+       .fill(Color("LightBlueP")))
+       .cornerRadius(5)
+       .padding(50)
             }
         } else {
             //save changes button
