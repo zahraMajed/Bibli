@@ -24,14 +24,16 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 - Widget
 - Notifications
 - Working Offline
-- 
+
 ## Technologies & Tools
 - SwiftUI 
 - Accessibility (VoiceOver)
 - WidgetKit
 - Local notifications
-- 
+
 ## Demo
+
+https://user-images.githubusercontent.com/73789363/212322499-25b1efe1-6fb6-4fcd-bb78-c1b1213f44a5.mp4
 
 ## Challenge Summary
 
