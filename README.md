@@ -6,12 +6,16 @@
 Our motive behind this app was to provide a way to support and motivate people while keeping in mind human diversity.
 Therefore, we created this IOS app, which displays motivational quotes on a daily basis, as it contains features that make it suitable for a large segment of people.
 ## Screenshots
+
+![BibliPreview](https://user-images.githubusercontent.com/73789363/212310755-1a012eb6-649b-4c94-992e-8860cb869017.png)
+
 ## Challenge Statement
 Make an inclusive solution that support individuals in positive thinking
+
 ## Solution Concept
 Providing motivational quotes for Individuals who need the motivation to stay focused so that they maintain their productivity level
-## Features
 
+## Features
 - Scrolling in thousands of quotes
 - Supports Arabic and English
 - Supports VoiceOver
@@ -20,12 +24,13 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 - Widget
 - Notifications
 - Working Offline
+- 
 ## Technologies & Tools
-
 - SwiftUI 
 - Accessibility (VoiceOver)
 - WidgetKit
 - Local notifications
+- 
 ## Demo
 
 ## Challenge Summary
