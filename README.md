@@ -35,6 +35,10 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 
 https://user-images.githubusercontent.com/73789363/212323176-8e4705f2-23c9-4eea-be89-82a7c4072508.mp4
 
+## TestFlight
+
+https://testflight.apple.com/join/LQC2ZOYc
+
 ## Challenge Summary
 
 <img width="944" alt="IngenioChallengeSummary" src="https://user-images.githubusercontent.com/73789363/212310985-e21d8d3b-88d9-4097-8fd1-035c2ae09ed1.png">
