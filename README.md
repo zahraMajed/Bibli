@@ -35,10 +35,13 @@ Providing motivational quotes for Individuals who need the motivation to stay f
 
 https://user-images.githubusercontent.com/73789363/212323176-8e4705f2-23c9-4eea-be89-82a7c4072508.mp4
 
-## TestFlight
-
-https://testflight.apple.com/join/LQC2ZOYc
 
 ## Challenge Summary
 
 <img width="870" alt="IngenioChallengeSummaryGitHub" src="https://user-images.githubusercontent.com/73789363/212484017-2880fa9c-eedb-495f-a699-9e0e8809077c.png">
+
+
+## App Store
+
+[![Download](https://user-images.githubusercontent.com/73789363/212541868-84d360f7-31cf-47d4-b24f-4d3a637f2953.svg
+)](https://apps.apple.com/sa/app/bibli-quotes/id1665166826)
